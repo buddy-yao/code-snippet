@@ -9,7 +9,7 @@
  * @return mixed
  * @throws \Exception
  */
-function retry(callable $func, $retry_interval = 0, $retry_count = 3, ...$args)
+function retry(callable $func, int $retry_interval = 0, int $retry_count = 3, ...$args)
 {
     try {
         return call_user_func($func, ...$args);
